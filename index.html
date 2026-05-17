@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaswanth Edupuganti — UI/UX Designer · Enterprise SaaS</title>
+<meta name="description" content="Jaswanth Edupuganti — UI/UX Designer specialising in enterprise SaaS, design systems, and multi-role B2B workflows. 60+ screens shipped. Token-based systems built from scratch.">
+<meta property="og:title" content="Jaswanth Edupuganti — UI/UX Designer">
+<meta property="og:description" content="Enterprise UX designer at MyClassboard. Design systems, token architecture, and role-based SaaS workflows. 60+ screens shipped.">
+<meta property="og:image" content="https://jaswanthedupuganti.netlify.app/JASWANTH%20PIC.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaswanthedupuganti.netlify.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MOBILE OVERLAY -->
+<div class="mob-ov" id="mob-ov" onclick="closeSb()"></div>
+
+<!-- ═══ SIDEBAR ═════════════════════════════════════════════════ -->
+<aside class="sb" id="sb">
+  <div class="sb-id">
+    <div class="id-row">
+      <div class="av">VJ</div>
+      <div>
+        <div class="id-name">Jaswanth</div>
+        <div class="id-handle">jaswanthevs · 2025</div>
+      </div>
+    </div>
+    <div class="sb-status"><span class="dot"></span>Open to Work</div>
+    <div class="id-role">UI/UX Designer · MyClassboard</div>
+    <div class="id-loc">
+      <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M8 1.5C5.8 1.5 4 3.3 4 5.5c0 3 4 9 4 9s4-6 4-9c0-2.2-1.8-4-4-4Z"/>
+        <circle cx="8" cy="5.5" r="1.5"/>
+      </svg>
+      Hyderabad, India
+    </div>
+  </div>
+
+  <nav class="sb-nav">
+    <div class="ng-lbl">Workspace</div>
+    <div class="ni on" onclick="go('overview',this)">
+      <svg class="ni-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/>
+        <rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/>
+      </svg>
+      Overview
+    </div>
+    <div class="ni" onclick="go('projects',this)">
+      <svg class="ni-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="2" width="5" height="8" rx="1"/><rect x="9" y="2" width="5" height="4" rx="1"/>
+        <rect x="9" y="8" width="5" height="6" rx="1"/><rect x="2" y="12" width="5" height="2" rx="1"/>
+      </svg>
+      Case Studies
+      <span class="ni-pill">4</span>
+    </div>
+    <div class="ni" onclick="go('lab',this)">
+      <svg class="ni-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M6 2v5L2.5 13.5h11L10 7V2M6 2h4"/>
+      </svg>
+      Design System Lab
+    </div>
+
+    <div class="ng-lbl" style="margin-top:8px;">Profile</div>
+    <div class="ni" onclick="go('about',this)">
+      <svg class="ni-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="8" cy="5" r="3"/>
+        <path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+      </svg>
+      About
+    </div>
+    <div class="ni" onclick="go('events',this)">
+      <svg class="ni-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="3" width="12" height="11" rx="1.5"/>
+        <path d="M5 1v4M11 1v4M2 8h12"/>
+        <circle cx="5" cy="11" r=".8" fill="currentColor" stroke="none"/>
+        <circle cx="8" cy="11" r=".8" fill="currentColor" stroke="none"/>
+        <circle cx="11" cy="11" r=".8" fill="currentColor" stroke="none"/>
+      </svg>
+      Events
+    </div>
+    <div class="ni" onclick="go('contact',this)">
+      <svg class="ni-ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M2 3h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
+        <path d="m1 4 7 5 7-5"/>
+      </svg>
+      Contact
+    </div>
+  </nav>
+
+  <div class="sb-ft">
+    <div class="soc-row">
+      <a class="soc" id="lnk-linkedin" href="#" target="_blank" title="LinkedIn">
+        <svg viewBox="0 0 16 16" fill="currentColor">
+          <path d="M0 1.15C0 .515.53 0 1.184 0h13.632C15.47 0 16 .514 16 1.15v13.7c0 .635-.53 1.15-1.184 1.15H1.184C.53 16 0 15.485 0 14.85V1.15zm4.943 12.248V6.169H2.542v7.229h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.229 0 7.229h2.4z"/>
+        </svg>
+      </a>
+      <a class="soc" id="lnk-behance" href="#" target="_blank" title="Behance">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.749-5.051-5.44 0-3.658 1.949-5.479 5.013-5.479 2.789 0 4.649 1.785 4.832 4.491.016.2.018.44.018.71H15.47c.123 1.71 1.1 2.614 2.516 2.614 1.132 0 1.82-.481 2.054-1.396h3.686zm-5.078-4.148c-.076-1.295-.832-2.113-2.056-2.113-1.262 0-2.058.856-2.166 2.113h4.222zM11.26 7.69c0 1.17-.49 2.02-1.47 2.5.89.52 1.47 1.42 1.47 2.66 0 1.89-1.36 3.15-4.55 3.15H1V4h5.44c2.83 0 4.82.72 4.82 3.69zm-7.4 1.83H5.9c1.13 0 1.78-.4 1.78-1.26 0-.79-.5-1.26-1.73-1.26H3.86v2.52zm0 4.65H5.9c1.6 0 2.22-.57 2.22-1.53 0-.93-.64-1.53-2.22-1.53H3.86v3.06z"/>
+        </svg>
+      </a>
+      <a class="soc" id="lnk-github" href="#" target="_blank" title="GitHub">
+        <svg viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+    </div>
+    <a class="dl-btn" id="lnk-resume" href="#" download>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 2v8M5 7l3 3 3-3M3 12v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1"/>
+      </svg>
+      Download Resume
+    </a>
+  </div>
+</aside>
+
+<!-- ═══ MOBILE HEADER ══════════════════════════════════════════ -->
+<header class="mob-hd">
+  <div class="mob-logo">
+    <div class="mob-av">VJ</div>
+    <div class="mob-name">Jaswanth</div>
+  </div>
+  <div class="mob-r">
+    <button class="mob-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg id="ico-d" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M14 10.5a6.5 6.5 0 1 1-9-9A8 8 0 0 0 14 10.5z"/>
+      </svg>
+      <svg id="ico-l" style="display:none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="8" cy="8" r="3"/>
+        <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15"/>
+      </svg>
+    </button>
+    <button class="mob-btn" onclick="openSb()" aria-label="Open menu">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M2 4h12M2 8h12M2 12h12"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ SHELL ════════════════════════════════════════════════════ -->
+<div class="shell">
+  <header class="tb">
+    <div class="tb-path">jaswanth.design <span class="tb-sep">/</span> <em id="bc">overview</em></div>
+    <div class="tb-r">
+      <div class="tb-clk" id="clk"></div>
+      <button class="tb-th" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="d-ico-d" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 10.5a6.5 6.5 0 1 1-9-9A8 8 0 0 0 14 10.5z"/>
+        </svg>
+        <svg id="d-ico-l" style="display:none" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="8" cy="8" r="3"/>
+          <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="scroll" id="sc">
+
+    <!-- ── OVERVIEW ───────────────────────────────────────── -->
+    <div class="pv on" id="pv-overview">
+      <div class="pg">
+        <div class="hero">
+          <div class="hero-tex"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-top">
+            <div class="hero-avail"><span class="dot"></span>Available · Full-Time Roles</div>
+          </div>
+          <h1 class="hero-h">Enterprise UX that<br>thinks in <em>systems.</em></h1>
+          <p class="hero-p">Loading…</p>
+          <div class="hero-kpis" id="hero-kpis"></div>
+        </div>
+
+        <div class="info3">
+          <div class="ic">
+            <div class="ic-lbl">Current Role</div>
+            <div class="ic-v">MyClassboard</div>
+            <div class="ic-s">UI/UX Designer Trainee — Enterprise SaaS for K–12 school management.</div>
+          </div>
+          <div class="ic">
+            <div class="ic-lbl">Specialisation</div>
+            <div class="ic-v">Enterprise SaaS UX</div>
+            <ul class="ic-dots">
+              <li>Multi-role B2B workflows</li>
+              <li>Design systems &amp; tokens</li>
+              <li>Edge-case interaction design</li>
+            </ul>
+          </div>
+          <div class="ic">
+            <div class="ic-lbl">Design Stack</div>
+            <div class="ic-v">Figma-first</div>
+            <ul class="ic-dots">
+              <li>Token Studio · Figma Variables</li>
+              <li>FigJam · Framer</li>
+              <li>AI-augmented workflows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin:28px 0 12px">
+          <div class="ey">Methodology</div>
+          <div class="sh" style="margin-bottom:12px">Design Process</div>
+        </div>
+        <div class="proc">
+          <div class="ps"><div class="ps-n">01 · Discover</div><div class="ps-nm">Research</div><div class="ps-it">User interviews<br>Competitive audit<br>Stakeholder mapping</div></div>
+          <div class="ps"><div class="ps-n">02 · Define</div><div class="ps-nm">Frame</div><div class="ps-it">Problem statement<br>Persona creation<br>Journey mapping</div></div>
+          <div class="ps"><div class="ps-n">03 · Design</div><div class="ps-nm">Build</div><div class="ps-it">Wireframes<br>Prototypes<br>Design systems</div></div>
+          <div class="ps"><div class="ps-n">04 · Deliver</div><div class="ps-nm">Handoff</div><div class="ps-it">Dev specs<br>Token docs<br>Usability testing</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PROJECTS ───────────────────────────────────────── -->
+    <div class="pv" id="pv-projects">
+      <div class="pg">
+        <div class="proj-sticky-hd">
+          <div class="ey">Work</div>
+          <div class="sh">Case Studies</div>
+          <div class="f-row">
+            <div class="fc on" onclick="filt('all',this)">All</div>
+            <div class="fc" onclick="filt('enterprise-saas',this)">Enterprise SaaS</div>
+            <div class="fc" onclick="filt('mobile',this)">Mobile</div>
+            <div class="fc" onclick="filt('design-system',this)">Design System</div>
+            <div class="fc" onclick="filt('concept',this)">Concept</div>
+          </div>
+        </div>
+        <div class="pgrid" id="pgrid"></div>
+      </div>
+    </div>
+
+    <!-- ── CASE STUDY (dynamic) ───────────────────────────── -->
+    <div class="pv" id="pv-case">
+      <div class="pg" id="cs-ct"></div>
+    </div>
+
+    <!-- ── DESIGN LAB ─────────────────────────────────────── -->
+    <div class="pv" id="pv-lab">
+      <div class="pg">
+        <div class="ey">Systems Work</div>
+        <div class="sh">Design System Lab</div>
+        <div class="lab2">
+          <div class="lc full">
+            <div class="lc-t">Color Token Architecture</div>
+            <div class="lc-s">Somaiya Vidyavihar Admissions Portal — 7 Token Studio + Figma Variables collections</div>
+            <div class="swatches">
+              <div class="sw" style="background:#1C3F6E"></div><div class="sw" style="background:#2756A0"></div>
+              <div class="sw" style="background:#3B72C8"></div><div class="sw" style="background:#6FA0DE"></div>
+              <div class="sw" style="background:#B2CBF1"></div><div class="sw" style="background:#E8F0FB"></div>
+              <div class="sw" style="background:#1A1A1A"></div><div class="sw" style="background:#555"></div>
+              <div class="sw" style="background:#909090"></div><div class="sw" style="background:#D5D5D5"></div>
+              <div class="sw" style="background:#22C55E"></div><div class="sw" style="background:#FBBF24"></div>
+              <div class="sw" style="background:#EF4444"></div>
+            </div>
+            <div class="swatch-meta"><span class="sm">Primary scale →</span><span class="sm">Neutral + Semantic →</span></div>
+          </div>
+          <div class="lc">
+            <div class="lc-t">Semantic Token Layer</div>
+            <div class="lc-s">Reference tokens aliasing primitives</div>
+            <div class="tk-r"><span class="tk-k">color.primary.500</span><span class="tk-v">#3B72C8</span></div>
+            <div class="tk-r"><span class="tk-k">color.surface.default</span><span class="tk-v">{color.neutral.50}</span></div>
+            <div class="tk-r"><span class="tk-k">color.text.primary</span><span class="tk-v">{color.neutral.900}</span></div>
+            <div class="tk-r"><span class="tk-k">spacing.component.md</span><span class="tk-v">16px</span></div>
+            <div class="tk-r"><span class="tk-k">radius.card</span><span class="tk-v">12px</span></div>
+            <div class="tk-r"><span class="tk-k">shadow.elevation.2</span><span class="tk-v">0 4px 12px α.10</span></div>
+          </div>
+          <div class="lc">
+            <div class="lc-t">Type Scale</div>
+            <div class="lc-s">Plus Jakarta Sans + Geist</div>
+            <div class="tscale">
+              <div class="ts-r"><span class="ts-m">Display</span><span style="font-family:var(--F1);font-size:28px;font-weight:800;color:var(--t1);letter-spacing:-1.2px">Display</span></div>
+              <div class="ts-r"><span class="ts-m">Title</span><span style="font-family:var(--F1);font-size:18px;font-weight:700;color:var(--t1)">Section Title</span></div>
+              <div class="ts-r"><span class="ts-m">Body</span><span style="font-size:14px;color:var(--t2);font-family:var(--F2)">Body paragraph — 14px/1.75</span></div>
+              <div class="ts-r"><span class="ts-m">Mono</span><span style="font-family:var(--FM);font-size:11px;color:var(--t3)">Label · Tag · Caption</span></div>
+            </div>
+          </div>
+          <div class="lc full">
+            <div class="lc-t">Component Library</div>
+            <div class="lc-s">Core interactive elements from Canteen Management System and Admissions Portal</div>
+            <div class="comp-row">
+              <button class="c-p">Primary Action</button>
+              <button class="c-s">Secondary</button>
+              <span class="c-b">● Active</span>
+              <input class="c-i" placeholder="Search modules…">
+              <span class="c-t">Tag / Role</span>
+              <span style="font-family:var(--FM);font-size:10px;background:rgba(251,191,36,.12);color:#FBBF24;padding:4px 10px;border-radius:20px;border:1px solid rgba(251,191,36,.2);">⚠ Warning</span>
+              <span style="font-family:var(--FM);font-size:10px;background:rgba(239,68,68,.1);color:#F87171;padding:4px 10px;border-radius:20px;border:1px solid rgba(239,68,68,.18);">✕ Error</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ABOUT ──────────────────────────────────────────── -->
+    <div class="pv" id="pv-about">
+      <div class="pg">
+        <div class="ey">Profile</div>
+        <div class="sh">About</div>
+
+        <div class="ab-banner">
+          <div class="ab-av-wrap">
+            <div class="ab-av2" id="ab-initials">VJ</div>
+          </div>
+          <div class="ab-id">
+            <div class="ab-id-name" id="ab-full-name">Jaswanth</div>
+            <div class="ab-id-role" id="ab-role-company">UI/UX Designer</div>
+            <div class="ab-id-tags">
+              <span class="ab-id-tag accent">Open to Work</span>
+              <span class="ab-id-tag">Enterprise SaaS</span>
+              <span class="ab-id-tag">Design Systems</span>
+              <span class="ab-id-tag">B2B UX</span>
+            </div>
+          </div>
+          <div class="ab-status-col">
+            <div class="ab-avail-pill"><span class="dot"></span>Available Now</div>
+            <div class="ab-loc">
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M8 1.5C5.8 1.5 4 3.3 4 5.5c0 3 4 9 4 9s4-6 4-9c0-2.2-1.8-4-4-4Z"/>
+                <circle cx="8" cy="5.5" r="1.5"/>
+              </svg>
+              Hyderabad, IN
+            </div>
+            <div class="ab-since" id="ab-since-txt"></div>
+          </div>
+        </div>
+
+        <div class="ab-stats" id="ab-stats-row"></div>
+
+        <div class="ab-grid">
+          <div class="ab-card">
+            <div class="ab-card-hd"><span class="ab-card-hd-dot"></span>Quick Info</div>
+            <div class="ab-info-list">
+              <div class="ab-info-row"><span class="ab-info-k">Full Name</span><span class="ab-info-v" id="ab-name-val">—</span></div>
+              <div class="ab-info-row"><span class="ab-info-k">Role</span><span class="ab-info-v" id="ab-role-val">—</span></div>
+              <div class="ab-info-row"><span class="ab-info-k">Company</span><span class="ab-info-v" id="ab-company-val">—</span></div>
+              <div class="ab-info-row"><span class="ab-info-k">Education</span><span class="ab-info-v" id="ab-edu-val">—</span></div>
+              <div class="ab-info-row"><span class="ab-info-k">Location</span><span class="ab-info-v" id="ab-location-val">—</span></div>
+            </div>
+          </div>
+
+          <div class="ab-card">
+            <div class="ab-card-hd"><span class="ab-card-hd-dot"></span>Design Toolbox</div>
+            <div class="ab-tools" id="ab-tools"></div>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--d1)">
+              <div class="ab-card-hd" style="margin-bottom:10px"><span class="ab-card-hd-dot"></span>Process Skills</div>
+              <div class="ab-tools" id="ab-process-skills"></div>
+            </div>
+          </div>
+
+          <div class="ab-card">
+            <div class="ab-card-hd"><span class="ab-card-hd-dot"></span>Skill Depth</div>
+            <div class="ab-sk-list" id="ab-skills-list"></div>
+          </div>
+
+          <div class="ab-card">
+            <div class="ab-card-hd"><span class="ab-card-hd-dot"></span>Design Philosophy</div>
+            <ul class="ab-phil" id="ab-philosophy"></ul>
+          </div>
+
+          <div class="ab-card full">
+            <div class="ab-card-hd"><span class="ab-card-hd-dot"></span>Certifications</div>
+            <div class="ab-certs" id="ab-certs"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── EVENTS ─────────────────────────────────────────── -->
+    <div class="pv" id="pv-events">
+      <div class="pg">
+        <div class="ey">Community</div>
+        <div class="sh">Events &amp; Gatherings</div>
+        <p style="font-size:13px;color:var(--t2);margin-bottom:22px;line-height:1.65;max-width:520px;">
+          UX/UI events I've attended, organised, or spoken at — spaces where design thinking happens in rooms, not just on screens.
+        </p>
+        <div class="ev-grid" id="ev-grid"></div>
+      </div>
+    </div>
+
+    <!-- ── CONTACT ────────────────────────────────────────── -->
+    <div class="pv" id="pv-contact">
+      <div class="pg">
+        <div class="ey">Get in Touch</div>
+        <div class="sh">Contact</div>
+        <div class="cg">
+          <div class="cc">
+            <div class="cc-ico">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2 3h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
+                <path d="m1 4 7 5 7-5"/>
+              </svg>
+            </div>
+            <div class="cc-lbl">Email</div>
+            <div class="cc-v">saijaswanthedupuganti@gmail.com</div>
+            <div class="cc-a" onclick="cp('saijaswanthedupuganti@gmail.com')">Copy address →</div>
+          </div>
+          <div class="cc">
+            <div class="cc-ico">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                <circle cx="8" cy="12" r=".8" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div class="cc-lbl">Phone</div>
+            <div class="cc-v">+91 94910 82728</div>
+            <div class="cc-a" onclick="cp('+919491082728')">Copy number →</div>
+          </div>
+          <div class="cc">
+            <div class="cc-ico">
+              <svg viewBox="0 0 16 16" fill="currentColor">
+                <path d="M0 1.15C0 .515.53 0 1.184 0h13.632C15.47 0 16 .514 16 1.15v13.7c0 .635-.53 1.15-1.184 1.15H1.184C.53 16 0 15.485 0 14.85V1.15zm4.943 12.248V6.169H2.542v7.229h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.229 0 7.229h2.4z"/>
+              </svg>
+            </div>
+            <div class="cc-lbl">LinkedIn</div>
+            <div class="cc-v">Venkata Sai Jaswanth</div>
+            <a class="cc-a" id="lnk-resume-dl" href="#" target="_blank">Open profile →</a>
+          </div>
+          <div class="cc">
+            <div class="cc-ico">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.051-1.749-5.051-5.44 0-3.658 1.949-5.479 5.013-5.479 2.789 0 4.649 1.785 4.832 4.491.016.2.018.44.018.71H15.47c.123 1.71 1.1 2.614 2.516 2.614 1.132 0 1.82-.481 2.054-1.396h3.686zm-5.078-4.148c-.076-1.295-.832-2.113-2.056-2.113-1.262 0-2.058.856-2.166 2.113h4.222zM11.26 7.69c0 1.17-.49 2.02-1.47 2.5.89.52 1.47 1.42 1.47 2.66 0 1.89-1.36 3.15-4.55 3.15H1V4h5.44c2.83 0 4.82.72 4.82 3.69zm-7.4 1.83H5.9c1.13 0 1.78-.4 1.78-1.26 0-.79-.5-1.26-1.73-1.26H3.86v2.52zm0 4.65H5.9c1.6 0 2.22-.57 2.22-1.53 0-.93-.64-1.53-2.22-1.53H3.86v3.06z"/>
+              </svg>
+            </div>
+            <div class="cc-lbl">Behance</div>
+            <div class="cc-v">behance.net/jaswanthevs</div>
+            <a class="cc-a" href="https://www.behance.net/jaswanthevs" target="_blank">View portfolio →</a>
+          </div>
+          <div class="cc full cc-cta">
+            <div class="cta-h">Let's build something that matters.</div>
+            <div class="cta-p">Whether it's a product challenge, a design system problem, or a full-time role — I'm reachable and responsive. Good design conversations start before the contract does.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /scroll -->
+</div><!-- /shell -->
+
+<!-- ═══ MOBILE BOTTOM NAV ═══════════════════════════════════════ -->
+<nav class="bnav">
+  <div class="bn on" onclick="go('overview',this)" data-page="overview">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/>
+      <rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/>
+    </svg>
+    <span class="bn-l">Home</span>
+  </div>
+  <div class="bn" onclick="go('projects',this)" data-page="projects">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="2" y="2" width="5" height="8" rx="1"/><rect x="9" y="2" width="5" height="4" rx="1"/>
+      <rect x="9" y="8" width="5" height="6" rx="1"/><rect x="2" y="12" width="5" height="2" rx="1"/>
+    </svg>
+    <span class="bn-l">Work</span>
+  </div>
+  <div class="bn" onclick="go('about',this)" data-page="about">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="8" cy="5" r="3"/>
+      <path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+    </svg>
+    <span class="bn-l">About</span>
+  </div>
+  <div class="bn" onclick="go('events',this)" data-page="events">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 1v4M11 1v4M2 8h12"/>
+      <circle cx="5" cy="11" r=".8" fill="currentColor" stroke="none"/>
+      <circle cx="8" cy="11" r=".8" fill="currentColor" stroke="none"/>
+      <circle cx="11" cy="11" r=".8" fill="currentColor" stroke="none"/>
+    </svg>
+    <span class="bn-l">Events</span>
+  </div>
+  <div class="bn" onclick="go('contact',this)" data-page="contact">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M2 3h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
+      <path d="m1 4 7 5 7-5"/>
+    </svg>
+    <span class="bn-l">Contact</span>
+  </div>
+</nav>
+
+<!-- LIGHTBOX -->
+<div class="lb-ov" id="lb" onclick="closeLb(event)">
+  <button class="lb-close" onclick="document.getElementById('lb').classList.remove('on');document.body.style.overflow=''">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M3 3l10 10M13 3L3 13"/>
+    </svg>
+  </button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1,event)">
+    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 3L5 9l6 6"/></svg>
+  </button>
+  <button class="lb-nav lb-next" onclick="lbNav(1,event)">
+    <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3l6 6-6 6"/></svg>
+  </button>
+  <div class="lb-wrap">
+    <img class="lb-img" id="lb-img" src="" alt="">
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Copied to clipboard</div>
+
+<!-- EMBED MODAL -->
+<div class="embed-modal" id="embed-modal" onclick="if(event.target.id==='embed-modal')closeEmbed()">
+  <div class="embed-wrap">
+    <button class="embed-close" onclick="closeEmbed()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3l10 10M13 3L3 13"/></svg>
+    </button>
+    <div id="embed-content"></div>
+  </div>
+</div>
+
+<!-- PDF MODAL -->
+<div class="embed-modal" id="pdf-modal" onclick="if(event.target.id==='pdf-modal')closePdf()">
+  <div class="embed-wrap pdf-wrap">
+    <button class="embed-close" onclick="closePdf()" aria-label="Close PDF viewer">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3l10 10M13 3L3 13"/></svg>
+    </button>
+    <div id="pdf-content"></div>
+  </div>
+</div>
+
+<!-- Load data first, then app logic -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
