@@ -247,8 +247,16 @@ function openEvGallery(idx) {
 
 /* ── PROJECT CARDS ───────────────────────────────────────────── */
 function renderCards(f) {
-  const data = (f === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat.includes(f))).filter(p => !p.disabled);
-  document.getElementById('pgrid').innerHTML = data.map(p => `
+  const all = (f === 'all'
+    ? PROJECTS
+    : PROJECTS.filter(p => p.cat.includes(f))
+  ).filter(p => !p.disabled);
+
+  const office     = all.filter(p => p.type === 'office');
+  const personal   = all.filter(p => p.type === 'personal');
+  const assignment = all.filter(p => p.type === 'assignment');
+
+  const makeCard = p => `
     <div class="pcard" onclick="openCase('${p.id}')">
       <div class="ct">
         <div class="ct-bg" style="background:${p.bg}"></div>
@@ -274,15 +282,36 @@ function renderCards(f) {
         <div class="cb-tags">${p.cat.map(c => `<span class="cb-tag">${c}</span>`).join('')}</div>
         <div class="cb-ft">
           <span class="cb-meta">${p.role} · ${p.timeline}</span>
-          ${!p.confidential ? `<span class="cb-cta">View Case Study
+          ${!p.confidential ? `<span class="cb-cta">${p.type === 'assignment' ? 'View Screens' : 'View Case Study'}
             <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 6h8M6 2l4 4-4 4"/>
             </svg>
           </span>` : ''}
         </div>
       </div>
+    </div>`;
+
+  const divider = (label, sub) => `
+    <div class="assign-divider">
+      <div class="assign-divider-line"></div>
+      <div class="assign-divider-label">${label}</div>
+      <div class="assign-divider-line"></div>
     </div>
-  `).join('');
+    ${sub ? `<p class="assign-sub">${sub}</p>` : ''}`;
+
+  let html = office.map(makeCard).join('');
+
+  if (personal.length) {
+    if (office.length) html += divider('Self-Initiated Projects', '');
+    html += personal.map(makeCard).join('');
+  }
+
+  if (assignment.length) {
+    html += divider('Company Assignments', 'Screens and briefs from design challenges during interview processes.');
+    html += assignment.map(makeCard).join('');
+  }
+
+  document.getElementById('pgrid').innerHTML = html;
 }
 
 /* ── CASE STUDY PAGE ─────────────────────────────────────────── */

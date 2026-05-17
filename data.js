@@ -147,13 +147,19 @@ const EVENTS = [
 ];
 
 /* ── PROJECTS ─────────────────────────────────────────────────
+   type (backend classification — controls grid order, no filter button):
+     "office"     → company / client work  (shown first)
+     "personal"   → self-initiated projects (shown second)
+     "assignment" → company design challenges (shown third)
+
    screens format:
-     { label:"Screen Name", src:"screens/project/file.png", type:"desktop"|"mobile" }
+     { label:"Screen Name", src:"path/to/file.png", type:"desktop"|"mobile" }
    Leave src:"" until you have the actual image.
 ─────────────────────────────────────────────────────────────── */
 const PROJECTS = [
   {
     id:         "canteen",
+    type:       "office",
     disabled:   false,
     confidential: true,  // company project — screens, case study links, and Behance hidden
     domain:     "Enterprise SaaS · EdTech · K-12",
@@ -197,6 +203,7 @@ const PROJECTS = [
 
   {
     id:         "student",
+    type:       "office",
     disabled:   false,
     confidential: true,  // company project — screens, case study links, and Behance hidden
     domain:     "Mobile · EdTech · K-12",
@@ -239,6 +246,7 @@ const PROJECTS = [
 
   {
     id:         "railways",
+    type:       "personal",
     domain:     "Mobile · Concept · Civic Technology",
     name:       "Indian Railways PNR-Bridge",
     brief:      "Self-initiated UX concept solving the geofencing gap that prevents transfer passengers from booking their next unreserved leg while already on a train.",
@@ -279,6 +287,7 @@ const PROJECTS = [
 
   {
     id:         "comingle",
+    type:       "personal",
     domain:     "Mobile · Community · UX Research",
     name:       "Comingle — Skill-Sharing App",
     brief:      "Community platform connecting people through skill sharing — designed with full design thinking research, competitive analysis, and A/B tested onboarding flows.",
@@ -321,5 +330,44 @@ const PROJECTS = [
 
   // ─── ADD NEW PROJECTS BELOW ──────────────────────────────────
   // Copy the block above, change the fields, and it appears in the grid automatically.
+
+  // ─── COMPANY ASSIGNMENTS ─────────────────────────────────────
+  // Add type:"assignment" to any project to place it in the
+  // "Company Assignments" section (below the main case studies).
+  // Set disabled:true until you're ready to show it.
+  {
+    id:         "assignment-1",
+    type:       "assignment",       // ← marks this as secondary / assignment work
+    disabled:   true,               // ← set to false when ready to publish
+    domain:     "[FILL: Domain · Platform]",
+    name:       "[FILL: Company Name] — Design Assignment",
+    brief:      "[FILL: One-line brief describing what the assignment asked you to design.]",
+    cat:        ["assignment"],
+    role:       "Design Assignment",
+    timeline:   "[FILL: e.g. 3-day assignment · Month Year]",
+    platform:   "[FILL: e.g. Mobile App / Web Dashboard]",
+    tools:      "Figma",
+    status:     "published",
+    bg:         "linear-gradient(145deg,#0D0D0F 0%,#1A1A1F 55%,#111115 100%)",
+    ic:         "#94A3B8",
+    cover:      "",
+    pdfPath:    "",                 // ← optional: brief/documentation PDF
+    figmaLink:  "",
+    embedUrl:   "",
+
+    problem:    "[FILL: What problem did the assignment ask you to solve?]",
+    solution:   "[FILL: What did you design and why?]",
+
+    highlights: [
+      "[FILL: Key decision or constraint you navigated]",
+      "[FILL: Notable screen or flow you designed]",
+      "[FILL: Any research or rationale you applied]",
+    ],
+
+    screens: [
+      { label: "Screen 1", src: "", type: "desktop" },
+      { label: "Screen 2", src: "", type: "desktop" },
+    ],
+  },
 ];
        
