@@ -299,7 +299,12 @@ function renderCards(f) {
     </div>
     ${sub ? `<p class="assign-sub">${sub}</p>` : ''}`;
 
-  let html = office.map(makeCard).join('');
+  let html = '';
+
+  if (office.length) {
+    html += divider('Office Work', 'Enterprise SaaS products designed at MyClassboard.');
+    html += office.map(makeCard).join('');
+  }
 
   if (personal.length) {
     if (office.length) html += divider('Self-Initiated Projects', '');
