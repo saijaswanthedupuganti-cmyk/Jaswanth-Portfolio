@@ -328,6 +328,78 @@ const PROJECTS = [
     ],
   },
 
+  {
+  id: "stupa-sports-analytics",
+
+  type: "assignment",
+
+  disabled: false,
+
+  domain: "SportsTech · Tournament Operations",
+
+  name: "Stupa Sports Analytics — Tournament Operations Platform",
+
+  brief:
+    "Designed an operational scheduling experience for competition managers handling live tournaments under high-pressure conditions.",
+
+  cat: ["SportsTech", "B2B", "Operations"],
+
+  role: "UX Researcher & Product Designer",
+
+  timeline: "Design Assignment · May 2026",
+
+  platform: "Web Dashboard",
+
+  tools: "Figma, UX Research, System Design",
+
+  status: "published",
+
+  bg: "linear-gradient(145deg,#0A0A12 0%,#18112B 45%,#12071F 100%)",
+
+  ic: "#8B5CF6",
+
+  cover: "/projects/stupa/cover.webp",
+
+  pdfPath: "/projects/stupa/stupa-case-study.pdf",
+
+  figmaLink: "https://www.figma.com/design/w6zRXfQxjXumI0mP53l3H6/sport?node-id=11-2664&t=UCPktthnsw3Xy6Z8-1",
+
+  embedUrl: "<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/w6zRXfQxjXumI0mP53l3H6/sport?node-id=7-860&page-id=0%3A1&scaling=contain&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>",
+
+  problem:
+    "Competition managers struggle to coordinate fixtures, tables, and umpire assignments during live tournaments where operational pressure and constant disruptions create scheduling chaos.",
+
+  solution:
+    "Designed a single-surface tournament operations dashboard focused on rapid scheduling, conflict prevention, and operational clarity through intelligent scheduling assistance and contextual decision-making.",
+
+  highlights: [
+    "Designed a single-surface scheduling workflow to reduce operational overload",
+    "Introduced conflict prevention checks before schedule confirmation",
+    "Applied operational UX principles for high-pressure tournament environments",
+    "Built scheduling logic around real-world tournament constraints",
+  ],
+
+  screens: [
+    {
+      label: "Tournament Dashboard",
+      src: "SPOTE\Scheduled screen.png",
+      type: "desktop",
+    },
+
+    {
+      label: "Fixture Scheduling Flow",
+      src: "SPOTE\View after auto-scheduling.png",
+      type: "desktop",
+    },
+
+    {
+      label: "Conflict Prevention Logic",
+      src: "SPOTE\View details about why it was not scheduled..png",
+      type: "desktop",
+    },
+  ],
+},
+
   // ─── ADD NEW PROJECTS BELOW ──────────────────────────────────
   // Copy the block above, change the fields, and it appears in the grid automatically.
 
@@ -335,12 +407,13 @@ const PROJECTS = [
   // Add type:"assignment" to any project to place it in the
   // "Company Assignments" section (below the main case studies).
   // Set disabled:true until you're ready to show it.
+  
   {
-    id:         "assignment-1",
+    id:         "",
     type:       "assignment",       // ← marks this as secondary / assignment work
     disabled:   true,               // ← set to false when ready to publish
-    domain:     "[FILL: FinTech · Platform]",
-    name:       "[FILL: Company Name] — FinTech Design Assignment",
+    domain:     "SportsTech",
+    name:       "[FILL: Company Name] — SportsTech Design Assignment",
     brief:      "[FILL: One-line brief describing what the FinTech assignment asked you to design.]",
     cat:        ["FinTech"],
     role:       "Design Assignment",
