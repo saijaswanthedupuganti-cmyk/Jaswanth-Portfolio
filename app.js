@@ -257,7 +257,7 @@ function renderCards(f) {
   const assignment = all.filter(p => p.type === 'assignment');
 
   const makeCard = p => `
-    <div class="pcard" onclick="openCase('${p.id}')">
+    <div class="pcard" onclick="openCase('${p.id}')" style="--pc:${p.ic}">
       <div class="ct">
         <div class="ct-bg" style="background:${p.bg}"></div>
         ${p.cover ? `<img class="ct-cover-img" src="${p.cover}" alt="${p.name}" loading="lazy">` : ''}
