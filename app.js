@@ -362,16 +362,33 @@ function openCase(id) {
     </div>`;
   }).join('');
 
-  const embed = p.embedUrl
-    ? `<div class="embed-box"><iframe src="${p.embedUrl}" allowfullscreen></iframe></div>`
+  const getEmbedSrc = value => {
+    const raw = (value || '').trim();
+    if (!raw) return '';
+    const match = raw.match(/<iframe[^>]*\ssrc=["']([^"']+)["']/i);
+    return match ? match[1] : raw;
+  };
+
+  const embedSrc = getEmbedSrc(p.embedUrl);
+
+  const figmaFallback = p.figmaLink
+    ? `<span class="embed-lnk" onclick="window.open('${p.figmaLink}','_blank')">Open in Figma →</span>`
+    : '';
+
+  const embed = embedSrc
+    ? `<div class="embed-box"><iframe src="${embedSrc}" allowfullscreen></iframe></div>`
     : `<div class="embed-box"><div class="embed-ph">
         <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2">
           <rect x="2" y="2" width="24" height="24" rx="3"/>
           <path d="M2 9h24M9 2v7"/>
         </svg>
         <p>Add Figma embedUrl in data.js to activate prototype preview</p>
-        <span class="embed-lnk" onclick="window.open('${p.figmaLink}','_blank')">Open in Figma →</span>
+        ${figmaFallback}
       </div></div>`;
+
+  const prototypeSection = !p.confidential && (embedSrc || p.figmaLink)
+    ? `<div class="csb"><div class="csb-lbl">Interactive Prototype</div>${embed}</div>`
+    : '';
 
   const mkBtn = (href, label, icon, cls) => href
     ? `<a class="${cls}" href="${href}" target="_blank">${icon}${label}</a>`
@@ -441,7 +458,7 @@ function openCase(id) {
           <ul class="hl">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
         </div>
         ${!p.confidential ? `<div class="csb"><div class="csb-lbl">Screens</div><div class="sg">${screens}</div></div>` : ''}
-        ${!p.confidential ? `<div class="csb"><div class="csb-lbl">Interactive Prototype</div>${embed}</div>` : ''}
+        ${prototypeSection}
       </div>
       <div class="cs-aside">
         ${!p.confidential ? `<div class="aside-actions">${asideView}${asideDl}</div>` : ''}
@@ -459,7 +476,7 @@ function openCase(id) {
             ${p.cat.map(c => `<span class="cb-tag">${c}</span>`).join('')}
           </div>
         </div>
-        ${!p.confidential ? `<a class="proto-btn" href="${p.figmaLink}" target="_blank">
+        ${!p.confidential && p.figmaLink ? `<a class="proto-btn" href="${p.figmaLink}" target="_blank">
           <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M8 1h5m0 0v5m0-5L6 8"/>
             <path d="M5 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-3"/>

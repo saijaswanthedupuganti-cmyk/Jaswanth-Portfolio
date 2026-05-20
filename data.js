@@ -358,13 +358,13 @@ const PROJECTS = [
 
   ic: "#8B5CF6",
 
-  cover: "/projects/stupa/cover.webp",
+  cover: "SPOTE/Scheduled screen.png",
 
-  pdfPath: "/projects/stupa/stupa-case-study.pdf",
+  pdfPath: "",
 
   figmaLink: "https://www.figma.com/design/w6zRXfQxjXumI0mP53l3H6/sport?node-id=11-2664&t=UCPktthnsw3Xy6Z8-1",
 
-  embedUrl: "<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/w6zRXfQxjXumI0mP53l3H6/sport?node-id=7-860&page-id=0%3A1&scaling=contain&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>",
+  embedUrl: "https://embed.figma.com/proto/w6zRXfQxjXumI0mP53l3H6/sport?node-id=7-860&page-id=0%3A1&scaling=contain&content-scaling=fixed&embed-host=share",
 
   problem:
     "Competition managers struggle to coordinate fixtures, tables, and umpire assignments during live tournaments where operational pressure and constant disruptions create scheduling chaos.",
@@ -382,19 +382,19 @@ const PROJECTS = [
   screens: [
     {
       label: "Tournament Dashboard",
-      src: "SPOTE\Scheduled screen.png",
+      src: "SPOTE/Scheduled screen.png",
       type: "desktop",
     },
 
     {
       label: "Fixture Scheduling Flow",
-      src: "SPOTE\View after auto-scheduling.png",
+      src: "SPOTE/View after auto-scheduling.png",
       type: "desktop",
     },
 
     {
       label: "Conflict Prevention Logic",
-      src: "SPOTE\View details about why it was not scheduled..png",
+      src: "SPOTE/View details about why it was not scheduled..png",
       type: "desktop",
     },
   ],
@@ -409,7 +409,7 @@ const PROJECTS = [
   // Set disabled:true until you're ready to show it.
   
   {
-    id:         "",
+    id:         "assignment-1",
     type:       "assignment",       // ← marks this as secondary / assignment work
     disabled:   true,               // ← set to false when ready to publish
     domain:     "SportsTech",
