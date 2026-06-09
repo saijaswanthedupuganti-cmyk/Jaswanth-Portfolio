@@ -25,7 +25,7 @@ const PROFILE = {
   available:   true,
   activeSince: "Jan 2026",
   handle:      "jaswanthevs · 2025",
-  bio:         "I design enterprise SaaS products at the intersection of information architecture, multi-role workflows, and design systems. 60+ screens shipped. Token-based systems built from scratch.",
+  bio:         "I design enterprise SaaS products at the intersection of information architecture, multi-role workflows, and design systems. I also ship full-stack products as a vibe coder — using Claude Code to build from concept to live app. 60+ screens shipped. One product live.",
 
   social: {
     linkedin: "https://www.linkedin.com/in/venkata-sai-jaswanth-edupuganti-787251199",
@@ -40,18 +40,18 @@ const PROFILE = {
   stats: [
     { n: "60+", label: "Screens Shipped" },
     { n: "7",   label: "Token Collections" },
-    { n: "4",   label: "Case Studies" },
+    { n: "5",   label: "Case Studies" },
   ],
 
   tools: [
     "Figma", "FigJam", "Framer", "Token Studio",
-    "Figma Variables", "Miro", "Protopie",
+    "Figma Variables", "Miro", "Protopie", "Claude Code",
   ],
 
   processSkills: [
     "Information Architecture", "User Research", "Wireframing",
     "Prototyping", "Usability Testing", "Dev Handoff",
-    "WCAG Accessibility", "AI-Augmented Workflows",
+    "WCAG Accessibility", "AI-Augmented Workflows", "Vibe Coding",
   ],
 
   philosophy: [
@@ -59,6 +59,7 @@ const PROFILE = {
     "The best UX is what users never consciously notice. Friction earns its place or disappears.",
     "Systems before screens. Tokens before components. Structure before style.",
     "Edge-case design is where product quality is decided. The center case is easy.",
+    "AI is the engineering co-pilot. A designer who can describe, direct, and ship a full-stack product — without waiting for a dev — has a structural advantage.",
     "AI augments the workflow, not the thinking. The designer's judgment is still the product.",
   ],
 };
@@ -325,6 +326,49 @@ const PROJECTS = [
       { label: "Explore",        src: "commingles_screens/explorer_clone.png", type: "mobile" },
       { label: "Skill offer",   src: "commingles_screens/skill%20offer%20-form.png", type: "mobile" },
       
+    ],
+  },
+
+  {
+    id:         "habitiq",
+    type:       "personal",
+    disabled:   false,
+    domain:     "Product · SaaS · Shared Living",
+    name:       "Habitiq — Shared Living Management App",
+    brief:      "Full-stack shared living platform built solo using Claude Code — smart duty rotation, expense splitting, and real-time flat management. Concept to live, security-audited PWA shipped in weeks.",
+    cat:        ["Mobile"],
+    role:       "Founder · Product Designer · Vibe Coder",
+    timeline:   "May 2026 – Present",
+    platform:   "Progressive Web App (Next.js + Firebase)",
+    tools:      "Claude Code · Figma · Next.js · Firestore · Vercel",
+    status:     "published",
+    bg:         "linear-gradient(145deg,#0D0520 0%,#1A0A38 55%,#100320 100%)",
+    ic:         "#7C3AED",
+    cover:      "",  // ← drop a Habitiq cover screenshot here
+    pdfPath:    "",
+    figmaLink:  "",
+    embedUrl:   "",
+
+    problem: "Shared living runs on WhatsApp chaos — chore assignments are forgotten, expense splits cause arguments, and no single tool handles the operational backbone of living together fairly. The problem was personal: Sai lived it.",
+
+    solution: "Built Habitiq end-to-end using Claude Code as the engineering co-pilot. Brought the product from concept to a live, security-audited app in weeks — with no traditional dev handoff. Sai drove every product decision: the problem framing, the feature set, the UX, the business model. Claude Code handled the implementation. Smart rotation engine auto-assigns duties, skips absent members, and reassigns on leave. Bills & Expenses handles recurring costs and ad-hoc splits with multi-currency support.",
+
+    highlights: [
+      "Concept to live production app in weeks — designed, directed, and shipped solo using Claude Code as the engineering layer (vibe coding)",
+      "Smart rotation engine: deterministic queue-based assignment, skip-OOS members, auto-reassign on leave/kick, projected turn dates on dashboard",
+      "Full security audit: 18 vulnerabilities found and fixed across Firestore rules, auth flows, input validation, and HTTP headers",
+      "Bills & Expenses: recurring bill rotation, one-off expense splits, multi-currency balances (INR/USD/EUR/GBP/AED), Settle Up flow",
+      "PWA: iOS step-by-step install prompt, Android install banner, offline fallback, real-time sync via Firestore onSnapshot",
+      "Live with real users — multi-flat support, swap system, analytics dashboard, activity audit trail, 8-member flat cap",
+    ],
+
+    screens: [
+      { label: "Dashboard — My Tasks",  src: "", type: "mobile" },
+      { label: "Rotation Queue",        src: "", type: "mobile" },
+      { label: "Bills & Expenses",      src: "", type: "mobile" },
+      { label: "Swap Request Flow",     src: "", type: "mobile" },
+      { label: "Analytics",             src: "", type: "mobile" },
+      { label: "Admin Org View",        src: "", type: "desktop" },
     ],
   },
 
