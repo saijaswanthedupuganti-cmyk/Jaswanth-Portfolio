@@ -166,7 +166,7 @@ const PROJECTS = [
     name:       "Canteen Management System",
     brief:      "Full redesign of a multi-role school canteen platform — menu planning, wallet payments, financial reporting, and role-specific UX for parents, admins, and operators.",
     cat:        ["EdTech"],
-    role:       "UI/UX Designer Trainee",
+    role:       "UI/UX Designer",
     timeline:   "Jan 2026 – Present",
     platform:   "Web SaaS Dashboard",
     tools:      "Figma · FigJam · Token Studio",
@@ -210,7 +210,7 @@ const PROJECTS = [
     name:       "Student Mobile App & Admissions Portal",
     brief:      "Student-facing mobile app covering homework, assessments, study center, performance analytics, and attendance — plus institutional admissions landing pages.",
     cat:        ["EdTech", "Mobile"],
-    role:       "UI/UX Designer Trainee",
+    role:       "UI/UX Designer",
     timeline:   "Jan 2026 – Present",
     platform:   "Mobile App + Web Landing Pages",
     tools:      "Figma · FigJam",
@@ -343,7 +343,7 @@ const PROJECTS = [
     status:     "published",
     bg:         "linear-gradient(145deg,#0D0520 0%,#1A0A38 55%,#100320 100%)",
     ic:         "#7C3AED",
-    cover:      "",  // ← drop a Habitiq cover screenshot here
+    cover:      "habitiq_cover.svg",
     liveUrl:    "https://garbage-liart.vercel.app",
     pdfPath:    "",
     figmaLink:  "",
@@ -362,7 +362,16 @@ const PROJECTS = [
       "Live with real users — multi-flat support, swap system, analytics dashboard, activity audit trail, 8-member flat cap",
     ],
 
-    screens: [],  // ← live app — "Try Live App" CTA shown; add screenshots here when ready
+    screens: [
+      // Drop real screenshots in a habitiq-screens/ folder, then fill src paths below.
+      // The phone frame CSS renders these automatically.
+      { label: "Dashboard — Duty Queue",     src: "", type: "mobile" },
+      { label: "Rotation — This Week",       src: "", type: "mobile" },
+      { label: "Swap Request Flow",          src: "", type: "mobile" },
+      { label: "Bills & Expense Split",      src: "", type: "mobile" },
+      { label: "Settle Up",                  src: "", type: "mobile" },
+      { label: "Analytics & Activity Log",   src: "", type: "mobile" },
+    ],
   },
 
   {

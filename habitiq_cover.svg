@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0520"/>
+      <stop offset="55%" stop-color="#1A0A38"/>
+      <stop offset="100%" stop-color="#100320"/>
+    </linearGradient>
+    <radialGradient id="gp" cx="72%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gl" cx="28%" cy="55%" r="42%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scr" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#120526"/>
+      <stop offset="100%" stop-color="#0D0420"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#gp)"/>
+  <rect width="1200" height="750" fill="url(#gl)"/>
+
+  <!-- Scattered accent dots -->
+  <circle cx="55"  cy="72"  r="1.5" fill="#7C3AED" opacity="0.4"/>
+  <circle cx="155" cy="38"  r="1"   fill="#A78BFA" opacity="0.3"/>
+  <circle cx="310" cy="60"  r="1.5" fill="#7C3AED" opacity="0.22"/>
+  <circle cx="435" cy="95"  r="1"   fill="#A78BFA" opacity="0.2"/>
+  <circle cx="75"  cy="295" r="2"   fill="#7C3AED" opacity="0.18"/>
+  <circle cx="38"  cy="480" r="1.5" fill="#A78BFA" opacity="0.22"/>
+  <circle cx="195" cy="685" r="1"   fill="#7C3AED" opacity="0.18"/>
+  <circle cx="375" cy="705" r="1.5" fill="#A78BFA" opacity="0.14"/>
+  <circle cx="565" cy="85"  r="1"   fill="#7C3AED" opacity="0.18"/>
+  <circle cx="618" cy="652" r="1.5" fill="#A78BFA" opacity="0.18"/>
+  <circle cx="1100" cy="75" r="1.5" fill="#7C3AED" opacity="0.28"/>
+  <circle cx="1165" cy="195" r="1"  fill="#A78BFA" opacity="0.22"/>
+  <circle cx="1145" cy="605" r="1.5" fill="#7C3AED" opacity="0.18"/>
+  <circle cx="1080" cy="706" r="1"  fill="#A78BFA" opacity="0.28"/>
+  <circle cx="485" cy="680" r="1"   fill="#7C3AED" opacity="0.15"/>
+  <circle cx="530" cy="420" r="1.5" fill="#A78BFA" opacity="0.12"/>
+
+  <!-- ── PHONE FRAME ── -->
+  <rect x="645" y="42" width="376" height="666" rx="42" fill="#0C0420" stroke="#3B1C66" stroke-width="1.5"/>
+  <rect x="646" y="43" width="374" height="664" rx="41" fill="none" stroke="rgba(124,58,237,0.14)" stroke-width="1"/>
+  <rect x="660" y="78" width="346" height="592" rx="28" fill="url(#scr)"/>
+  <rect x="791" y="86" width="104" height="12" rx="6" fill="#0C0420"/>
+
+  <!-- Status bar -->
+  <text x="675" y="104" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.25">9:41</text>
+  <rect x="958" y="96" width="22" height="9" rx="2.5" fill="none" stroke="white" stroke-width="0.8" opacity="0.25"/>
+  <rect x="959" y="97" width="13" height="7" rx="2" fill="white" opacity="0.25"/>
+  <rect x="984" y="96" width="3" height="9" rx="1" fill="white" opacity="0.25"/>
+
+  <!-- Header -->
+  <text x="675" y="132" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="15" fill="white" opacity="0.9">Flat 4B</text>
+  <text x="675" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.32">4 members · 2 duties this week</text>
+
+  <!-- Avatars -->
+  <circle cx="697" cy="192" r="22" fill="#4C1D95"/>
+  <circle cx="697" cy="192" r="22" fill="none" stroke="#7C3AED" stroke-width="2"/>
+  <text x="689" y="198" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="14" fill="white">S</text>
+  <circle cx="714" cy="174" r="6.5" fill="#7C3AED"/>
+  <text x="711" y="179" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="white">1</text>
+
+  <circle cx="745" cy="192" r="22" fill="#2E1065"/>
+  <text x="737" y="198" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="14" fill="white">R</text>
+  <circle cx="793" cy="192" r="22" fill="#3B0764"/>
+  <text x="785" y="198" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="14" fill="white">A</text>
+  <circle cx="841" cy="192" r="22" fill="#1E0840"/>
+  <text x="833" y="198" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="14" fill="white">K</text>
+
+  <text x="684" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="white" opacity="0.45">Sai</text>
+  <text x="731" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="white" opacity="0.25">Ravi</text>
+  <text x="778" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="white" opacity="0.25">Ankit</text>
+  <text x="825" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="white" opacity="0.25">Karan</text>
+
+  <!-- Section label -->
+  <text x="675" y="252" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="10" fill="white" opacity="0.4" letter-spacing="0.8">THIS WEEK</text>
+
+  <!-- Duty row 1 — active -->
+  <rect x="675" y="262" width="308" height="48" rx="10" fill="rgba(124,58,237,0.14)" stroke="rgba(124,58,237,0.28)" stroke-width="1"/>
+  <circle cx="695" cy="286" r="8" fill="#7C3AED" opacity="0.85"/>
+  <text x="712" y="283" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="12" fill="white">Kitchen Cleaning</text>
+  <text x="712" y="299" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.38">Sai · Today</text>
+  <rect x="942" y="279" width="30" height="14" rx="7" fill="rgba(16,185,129,0.2)" stroke="rgba(16,185,129,0.4)" stroke-width="0.8"/>
+  <text x="948" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="8" fill="#10b981">Due</text>
+
+  <!-- Duty row 2 -->
+  <rect x="675" y="318" width="308" height="48" rx="10" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.055)" stroke-width="1"/>
+  <circle cx="695" cy="342" r="8" fill="#A78BFA" opacity="0.38"/>
+  <text x="712" y="339" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="white" opacity="0.62">Trash Disposal</text>
+  <text x="712" y="355" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.25">Ravi · Thu</text>
+
+  <!-- Duty row 3 -->
+  <rect x="675" y="374" width="308" height="48" rx="10" fill="rgba(255,255,255,0.015)" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+  <circle cx="695" cy="398" r="8" fill="#A78BFA" opacity="0.18"/>
+  <text x="712" y="395" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="white" opacity="0.4">Grocery Run</text>
+  <text x="712" y="411" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.18">Ankit · Sat</text>
+
+  <!-- Bills section -->
+  <text x="675" y="446" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="10" fill="white" opacity="0.4" letter-spacing="0.8">BILLS</text>
+  <rect x="675" y="456" width="308" height="52" rx="10" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+  <text x="692" y="477" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="white" opacity="0.55">Total Rent</text>
+  <text x="692" y="495" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.25">Rs.32,000 per month</text>
+  <text x="895" y="476" font-family="system-ui,-apple-system,sans-serif" font-weight="700" font-size="14" fill="#A78BFA">Rs.8K</text>
+  <text x="895" y="492" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="white" opacity="0.28">your share</text>
+
+  <!-- Swap + settle chips -->
+  <rect x="675" y="522" width="82" height="20" rx="10" fill="rgba(124,58,237,0.14)" stroke="rgba(124,58,237,0.22)" stroke-width="0.8"/>
+  <text x="690" y="536" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#A78BFA">2 Swaps</text>
+  <rect x="766" y="522" width="92" height="20" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.16)" stroke-width="0.8"/>
+  <text x="782" y="536" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#10b981">Settled Up</text>
+
+  <!-- Activity line -->
+  <rect x="675" y="554" width="308" height="26" rx="7" fill="rgba(255,255,255,0.015)"/>
+  <text x="690" y="571" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="white" opacity="0.18">Sai marked Kitchen done · 2h ago</text>
+
+  <!-- Bottom nav -->
+  <rect x="660" y="630" width="346" height="40" fill="#0A0318"/>
+  <rect x="660" y="630" width="346" height="1" fill="rgba(124,58,237,0.2)"/>
+  <rect x="700" y="641" width="12" height="2" rx="1" fill="#7C3AED"/>
+  <rect x="700" y="646" width="12" height="2" rx="1" fill="#7C3AED" opacity="0.45"/>
+  <rect x="700" y="651" width="7"  height="2" rx="1" fill="#7C3AED" opacity="0.2"/>
+  <circle cx="778" cy="651" r="3" fill="rgba(255,255,255,0.14)"/>
+  <circle cx="836" cy="651" r="3" fill="rgba(255,255,255,0.14)"/>
+  <circle cx="894" cy="651" r="3" fill="rgba(255,255,255,0.14)"/>
+  <rect x="786" y="667" width="94" height="3" rx="1.5" fill="rgba(255,255,255,0.18)"/>
+
+  <!-- ── LEFT CONTENT ── -->
+
+  <!-- Icon -->
+  <rect x="80" y="122" width="58" height="58" rx="15" fill="rgba(124,58,237,0.1)" stroke="#7C3AED" stroke-width="1"/>
+  <path d="M97 138 l0 26 M97 151 l24 0 M121 138 l0 26" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="240" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-weight="700" font-size="58" fill="white">Habitiq</text>
+
+  <!-- Tagline -->
+  <text x="84" y="274" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="white" opacity="0.38">Shared Living Management</text>
+
+  <!-- Status badges -->
+  <rect x="84"  y="294" width="68" height="24" rx="12" fill="rgba(16,185,129,0.1)"  stroke="rgba(16,185,129,0.3)"  stroke-width="1"/>
+  <circle cx="102" cy="306" r="3.5" fill="#10b981"/>
+  <text x="110" y="310" font-family="system-ui,-apple-system,sans-serif" font-weight="700" font-size="10" fill="#10b981" letter-spacing="0.5">LIVE</text>
+
+  <rect x="162" y="294" width="56" height="24" rx="12" fill="rgba(124,58,237,0.1)" stroke="rgba(124,58,237,0.28)" stroke-width="1"/>
+  <text x="177" y="310" font-family="system-ui,-apple-system,sans-serif" font-weight="700" font-size="10" fill="#A78BFA" letter-spacing="0.3">PWA</text>
+
+  <rect x="228" y="294" width="106" height="24" rx="12" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.22)" stroke-width="1"/>
+  <text x="243" y="310" font-family="system-ui,-apple-system,sans-serif" font-weight="600" font-size="10" fill="#818CF8" letter-spacing="0.2">Vibe Coded</text>
+
+  <!-- Divider -->
+  <rect x="84" y="338" width="460" height="1" fill="rgba(124,58,237,0.18)"/>
+
+  <!-- Stats -->
+  <text x="84"  y="376" font-family="-apple-system,BlinkMacSystemFont,system-ui,sans-serif" font-weight="700" font-size="32" fill="white">60+</text>
+  <text x="84"  y="400" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.32" letter-spacing="0.6">SCREENS</text>
+
+  <text x="192" y="376" font-family="-apple-system,BlinkMacSystemFont,system-ui,sans-serif" font-weight="700" font-size="32" fill="white">1</text>
+  <text x="192" y="400" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.32" letter-spacing="0.6">LIVE APP</text>
+
+  <text x="265" y="376" font-family="-apple-system,BlinkMacSystemFont,system-ui,sans-serif" font-weight="700" font-size="32" fill="white">~8wk</text>
+  <text x="265" y="400" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.32" letter-spacing="0.6">TO SHIP</text>
+
+  <text x="405" y="376" font-family="-apple-system,BlinkMacSystemFont,system-ui,sans-serif" font-weight="700" font-size="32" fill="white">18</text>
+  <text x="405" y="400" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.32" letter-spacing="0.6">CVEs FIXED</text>
+
+  <!-- Stack line -->
+  <text x="84" y="440" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="white" opacity="0.25">Built solo · Next.js 16 · Firebase · Tailwind v4 · Vercel</text>
+
+  <!-- Tech pills -->
+  <rect x="84"  y="460" width="72" height="22" rx="11" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="100" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.38">Next.js 16</text>
+
+  <rect x="166" y="460" width="66" height="22" rx="11" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="182" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.38">Firebase</text>
+
+  <rect x="242" y="460" width="70" height="22" rx="11" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="258" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.38">TypeScript</text>
+
+  <rect x="322" y="460" width="58" height="22" rx="11" fill="rgba(255,255,255,0.035)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="338" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="white" opacity="0.38">Tailwind</text>
+
+  <!-- Feature line -->
+  <text x="84" y="530" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#A78BFA" opacity="0.4">Smart Rotation · Expense Splits · Real-time Sync · Security Audited</text>
+
+</svg>
