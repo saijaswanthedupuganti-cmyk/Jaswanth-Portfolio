@@ -171,9 +171,38 @@
           <div class="hero-top">
             <div class="hero-avail"><span class="dot"></span>Available · Full-Time Roles</div>
           </div>
-          <h1 class="hero-h">Enterprise UX that<br>thinks in <em>systems.</em></h1>
-          <p class="hero-p">Loading…</p>
+          <h1 class="hero-h">Enterprise UX<br>that <em>ships.</em></h1>
+          <p class="hero-p"></p>
           <div class="hero-kpis" id="hero-kpis"></div>
+        </div>
+
+        <!-- Featured Build — Habitiq -->
+        <div class="feat-build">
+          <div class="feat-build-glow"></div>
+          <div class="feat-build-in">
+            <div>
+              <div class="feat-ey"><span class="feat-live-dot"></span>Live in production</div>
+              <div class="feat-title">Habitiq</div>
+              <div class="feat-sub">Shared Living · PWA · Next.js · Firebase · Vercel</div>
+              <p class="feat-desc">Concept to live, security-audited app in 8 weeks. Smart duty rotation, expense splits, real-time sync. Designed and built solo using Claude Code — no dev handoff, no waiting.</p>
+              <div class="feat-stats">
+                <div class="feat-stat"><span class="feat-sn">60+</span><span class="feat-sl">Screens</span></div>
+                <div class="feat-stat"><span class="feat-sn">~8wk</span><span class="feat-sl">To Ship</span></div>
+                <div class="feat-stat"><span class="feat-sn">18</span><span class="feat-sl">CVEs Fixed</span></div>
+                <div class="feat-stat"><span class="feat-sn">Real</span><span class="feat-sl">Users</span></div>
+              </div>
+              <div class="feat-acts">
+                <a href="https://garbage-liart.vercel.app" target="_blank" rel="noopener" class="feat-live-btn">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="5.5"/><circle cx="7" cy="7" r="2" fill="currentColor" stroke="none"/></svg>
+                  Try Live App
+                </a>
+                <button onclick="openCase('habitiq')" class="feat-case-btn">View Case Study →</button>
+              </div>
+            </div>
+            <div class="feat-img-wrap">
+              <img src="habitiq_cover.svg" alt="Habitiq — Shared Living Management App">
+            </div>
+          </div>
         </div>
 
         <div class="info3">
@@ -202,16 +231,6 @@
           </div>
         </div>
 
-        <div style="margin:28px 0 12px">
-          <div class="ey">Methodology</div>
-          <div class="sh" style="margin-bottom:12px">Design Process</div>
-        </div>
-        <div class="proc">
-          <div class="ps"><div class="ps-n">01 · Discover</div><div class="ps-nm">Research</div><div class="ps-it">User interviews<br>Competitive audit<br>Stakeholder mapping</div></div>
-          <div class="ps"><div class="ps-n">02 · Define</div><div class="ps-nm">Frame</div><div class="ps-it">Problem statement<br>Persona creation<br>Journey mapping</div></div>
-          <div class="ps"><div class="ps-n">03 · Design</div><div class="ps-nm">Build</div><div class="ps-it">Wireframes<br>Prototypes<br>Design systems</div></div>
-          <div class="ps"><div class="ps-n">04 · Deliver</div><div class="ps-nm">Handoff</div><div class="ps-it">Dev specs<br>Token docs<br>Usability testing</div></div>
-        </div>
       </div>
     </div>
 
@@ -223,11 +242,10 @@
           <div class="sh">Case Studies</div>
           <div class="f-row">
             <div class="fc on" onclick="filt('all',this)">All</div>
+            <div class="fc" onclick="filt('Mobile',this)">Mobile</div>
             <div class="fc" onclick="filt('EdTech',this)">EdTech</div>
-            <div class="fc" onclick="filt('FinTech',this)">FinTech</div>
             <div class="fc" onclick="filt('SportsTech',this)">SportsTech</div>
             <div class="fc" onclick="filt('Civic Tech',this)">Civic Tech</div>
-            <div class="fc" onclick="filt('Mobile',this)">Mobile</div>
           </div>
         </div>
         <div class="pgrid" id="pgrid"></div>
@@ -247,7 +265,7 @@
         <div class="lab2">
           <div class="lc full">
             <div class="lc-t">Color Token Architecture</div>
-            <div class="lc-s">Somaiya Vidyavihar Admissions Portal — 7 Token Studio + Figma Variables collections</div>
+            <div class="lc-s">Canteen Management System — 7 Token Studio + Figma Variables collections</div>
             <div class="swatches">
               <div class="sw" style="background:#1C3F6E"></div><div class="sw" style="background:#2756A0"></div>
               <div class="sw" style="background:#3B72C8"></div><div class="sw" style="background:#6FA0DE"></div>
@@ -288,8 +306,8 @@
               <span class="c-b">● Active</span>
               <input class="c-i" placeholder="Search modules…">
               <span class="c-t">Tag / Role</span>
-              <span style="font-family:var(--FM);font-size:10px;background:rgba(251,191,36,.12);color:#FBBF24;padding:4px 10px;border-radius:20px;border:1px solid rgba(251,191,36,.2);">⚠ Warning</span>
-              <span style="font-family:var(--FM);font-size:10px;background:rgba(239,68,68,.1);color:#F87171;padding:4px 10px;border-radius:20px;border:1px solid rgba(239,68,68,.18);">✕ Error</span>
+              <span style="font-family:var(--FM);font-size:10px;background:rgba(251,191,36,.12);color:#FBBF24;padding:4px 10px;border-radius:20px;border:1px solid rgba(251,191,36,.2);display:inline-flex;align-items:center;gap:5px"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" style="width:10px;height:10px;flex-shrink:0"><path d="M6 1.5L10.5 10H1.5L6 1.5z"/><path d="M6 5v2M6 8.5h.01"/></svg>Warning</span>
+              <span style="font-family:var(--FM);font-size:10px;background:rgba(239,68,68,.1);color:#F87171;padding:4px 10px;border-radius:20px;border:1px solid rgba(239,68,68,.18);display:inline-flex;align-items:center;gap:5px"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" style="width:10px;height:10px;flex-shrink:0"><circle cx="6" cy="6" r="4.5"/><path d="M4.5 4.5l3 3M7.5 4.5l-3 3"/></svg>Error</span>
             </div>
           </div>
         </div>
@@ -419,7 +437,7 @@
             </div>
             <div class="cc-lbl">LinkedIn</div>
             <div class="cc-v">Venkata Sai Jaswanth</div>
-            <a class="cc-a" id="lnk-resume-dl" href="#" target="_blank">Open profile →</a>
+            <a class="cc-a" href="https://www.linkedin.com/in/venkata-sai-jaswanth-edupuganti-787251199" target="_blank" rel="noopener">Open profile →</a>
           </div>
           <div class="cc">
             <div class="cc-ico">

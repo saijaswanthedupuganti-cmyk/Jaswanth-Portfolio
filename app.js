@@ -59,7 +59,6 @@ function fillProfile() {
   q('#lnk-behance').href          = P.social.behance;
   q('#lnk-github').href           = P.social.github;
   q('#lnk-resume').href           = P.resume;
-  q('#lnk-resume-dl').href        = P.resume;
 
   // Mobile header
   setAvatar(q('.mob-av'), P);
@@ -310,7 +309,7 @@ function renderCards(f) {
   }
 
   if (assignment.length) {
-    html += divider('Company Assignments', 'Screens and briefs from design challenges during interview processes.');
+    html += divider('Company Assignments', '');
     html += assignment.map(makeCard).join('');
   }
 
