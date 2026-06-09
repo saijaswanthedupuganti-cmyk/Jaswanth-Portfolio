@@ -137,15 +137,12 @@ function renderAbout() {
     psEl.innerHTML = P.processSkills.map(t => `<span class="ab-tool">${t}</span>`).join('');
   }
 
-  // Skills bars
+  // Skill Depth — pill tags (percentage bars removed: arbitrary numbers look unprofessional)
   const skEl = document.getElementById('ab-skills-list');
   if (skEl) {
-    skEl.innerHTML = SKILLS.map(s =>
-      `<div class="ab-sk-it">
-        <div class="ab-sk-h"><span class="ab-sk-n">${s.name}</span><span class="ab-sk-p">${s.pct}%</span></div>
-        <div class="ab-sk-tr"><div class="ab-sk-fl" data-w="${s.pct}%"></div></div>
-      </div>`
-    ).join('');
+    skEl.innerHTML = `<div class="ab-tools" style="margin-top:4px">` +
+      SKILLS.map(s => `<span class="ab-tool">${s.name}</span>`).join('') +
+      `</div>`;
   }
 
   // Philosophy
@@ -409,6 +406,14 @@ function openCase(id) {
     ? `<a class="cs-btn-primary" href="${p.liveUrl}" target="_blank" rel="noopener">${liveIco}Try Live App</a>`
     : '';
 
+  const mailIco = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px"><path d="M1 3h12a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="m0 4 7 4.5L14 4"/></svg> `;
+  const contactBtn = p.confidential
+    ? `<button class="cs-btn-primary" onclick="cp('saijaswanthedupuganti@gmail.com')">${mailIco}Request Work Samples</button>`
+    : '';
+  const contactAsideBtn = p.confidential
+    ? `<button class="aside-btn-primary" onclick="cp('saijaswanthedupuganti@gmail.com')">${mailIco}Request Work Samples</button>`
+    : '';
+
   let viewBtn = '';
   let dlBtn   = '';
   let asideView = '';
@@ -448,7 +453,7 @@ function openCase(id) {
         <div class="cs-cover-title">${p.name}</div>
       </div>
     </div>
-    <div class="cs-actions">${liveBtn}${viewBtn}${dlBtn}</div>
+    <div class="cs-actions">${liveBtn}${viewBtn}${dlBtn}${contactBtn}</div>
     <div class="cs-meta">
       <div class="csm"><div class="csm-k">Role</div><div class="csm-v">${p.role}</div></div>
       <div class="csm"><div class="csm-k">Timeline</div><div class="csm-v">${p.timeline}</div></div>
@@ -463,6 +468,18 @@ function openCase(id) {
           <div class="csb-lbl">Key Highlights</div>
           <ul class="hl">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
         </div>
+        ${p.confidential ? `<div class="csb" style="border:1px solid rgba(251,191,36,.18);background:rgba(251,191,36,.04);border-radius:10px;padding:22px 24px">
+          <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px">
+            <svg viewBox="0 0 16 16" fill="none" stroke="#FBBF24" stroke-width="1.5" style="width:15px;height:15px;flex-shrink:0">
+              <rect x="3" y="7" width="10" height="8" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/>
+            </svg>
+            <span style="font-size:10px;font-weight:700;color:#FBBF24;font-family:var(--FM,monospace);letter-spacing:.6px">NDA PROTECTED</span>
+          </div>
+          <p style="font-size:13px;color:var(--t2);line-height:1.7;margin:0 0 16px">This is company work designed at MyClassboard. Screens and documentation are under NDA — but I'm happy to walk you through the design decisions, edge cases, and outcomes in a live conversation.</p>
+          <button class="cs-btn-primary" onclick="cp('saijaswanthedupuganti@gmail.com')" style="font-size:12px;padding:9px 18px">
+            ${mailIco}Email to Request Work Samples
+          </button>
+        </div>` : ''}
         ${!p.confidential ? `<div class="csb">
           <div class="csb-lbl">Screens</div>
           ${imgScreens.length > 0
@@ -482,6 +499,7 @@ function openCase(id) {
       </div>
       <div class="cs-aside">
         ${!p.confidential ? `<div class="aside-actions">${asideView}${asideDl}</div>` : ''}
+        ${p.confidential ? `<div class="aside-actions">${contactAsideBtn}</div>` : ''}
         <div class="ac">
           <div class="ac-t">Brief</div>
           ${[p.role, p.timeline, p.platform].map(v => `<div class="ac-it">${v}</div>`).join('')}

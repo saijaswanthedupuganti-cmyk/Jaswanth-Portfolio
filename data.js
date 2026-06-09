@@ -18,7 +18,7 @@ const PROFILE = {
   photo:       "JASWANTH PIC.png",
   firstName:   "Jaswanth",
   fullName:    "Venkata Sai Jaswanth Edupuganti",
-  role:        "UI/UX Designer Trainee",
+  role:        "UI/UX Designer",
   company:     "MyClassboard Educational Solutions",
   location:    "Hyderabad, India",
   timezone:    "Asia/Kolkata",
