@@ -25,7 +25,7 @@ const PROFILE = {
   available:   true,
   activeSince: "Jan 2026",
   handle:      "jaswanthevs · 2025",
-  bio:         "I design enterprise SaaS products at the intersection of information architecture, multi-role workflows, and design systems. I also ship full-stack products as a vibe coder — using Claude Code to build from concept to live app. 60+ screens shipped. One product live.",
+  bio:         "I design complex SaaS products at the intersection of multi-role workflows, information architecture, and design systems — and I ship full-stack products using Claude Code. Habitiq is a live PWA I built solo in weeks: smart duty rotation for flatmates, real users, security-audited. 60+ screens shipped.",
 
   social: {
     linkedin: "https://www.linkedin.com/in/venkata-sai-jaswanth-edupuganti-787251199",
@@ -39,7 +39,7 @@ const PROFILE = {
 
   stats: [
     { n: "60+", label: "Screens Shipped" },
-    { n: "7",   label: "Token Collections" },
+    { n: "1",   label: "Product Shipped Live" },
     { n: "5",   label: "Case Studies" },
   ],
 
@@ -60,7 +60,6 @@ const PROFILE = {
     "Systems before screens. Tokens before components. Structure before style.",
     "Edge-case design is where product quality is decided. The center case is easy.",
     "AI is the engineering co-pilot. A designer who can describe, direct, and ship a full-stack product — without waiting for a dev — has a structural advantage.",
-    "AI augments the workflow, not the thinking. The designer's judgment is still the product.",
   ],
 };
 
@@ -345,6 +344,7 @@ const PROJECTS = [
     bg:         "linear-gradient(145deg,#0D0520 0%,#1A0A38 55%,#100320 100%)",
     ic:         "#7C3AED",
     cover:      "",  // ← drop a Habitiq cover screenshot here
+    liveUrl:    "https://garbage-liart.vercel.app",
     pdfPath:    "",
     figmaLink:  "",
     embedUrl:   "",
@@ -362,14 +362,7 @@ const PROJECTS = [
       "Live with real users — multi-flat support, swap system, analytics dashboard, activity audit trail, 8-member flat cap",
     ],
 
-    screens: [
-      { label: "Dashboard — My Tasks",  src: "", type: "mobile" },
-      { label: "Rotation Queue",        src: "", type: "mobile" },
-      { label: "Bills & Expenses",      src: "", type: "mobile" },
-      { label: "Swap Request Flow",     src: "", type: "mobile" },
-      { label: "Analytics",             src: "", type: "mobile" },
-      { label: "Admin Org View",        src: "", type: "desktop" },
-    ],
+    screens: [],  // ← live app — "Try Live App" CTA shown; add screenshots here when ready
   },
 
   {

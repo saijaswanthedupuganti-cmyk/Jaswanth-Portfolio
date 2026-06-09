@@ -221,10 +221,10 @@ function renderEvents() {
 
     return `<div class="ev-card${hasImages ? ' ev-card-clickable' : ''}"
               ${hasImages ? `onclick="openEvGallery(${i})"` : ''}>
-      <div class="ev-img-grid">
-        ${cells}
-        <div class="ev-tag">${ev.tag}</div>
-      </div>
+      ${hasImages
+        ? `<div class="ev-img-grid">${cells}<div class="ev-tag">${ev.tag}</div></div>`
+        : `<div style="padding:14px 16px 0"><span class="ev-tag" style="position:static;display:inline-block">${ev.tag}</span></div>`
+      }
       <div class="ev-body">
         <div class="ev-title">${ev.title}</div>
         <div class="ev-meta"><span>${ev.date}</span><span>·</span><span>${ev.location}</span></div>
@@ -261,6 +261,7 @@ function renderCards(f) {
       <div class="ct">
         <div class="ct-bg" style="background:${p.bg}"></div>
         ${p.cover ? `<img class="ct-cover-img" src="${p.cover}" alt="${p.name}" loading="lazy">` : ''}
+        ${p.liveUrl ? `<div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(16,185,129,.15);color:#10b981;border:1px solid rgba(16,185,129,.25);font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.6px;font-family:var(--FM,monospace)">◉ LIVE</div>` : ''}
         <div class="ct-grain"></div><div class="ct-dots"></div>
         ${!p.cover ? `<div class="ct-ctr"><div class="ct-ico">
           <svg viewBox="0 0 28 28" fill="none" stroke="${p.ic}" stroke-width="1.4">
@@ -403,6 +404,11 @@ function openCase(id) {
 
   // If project provides an embeddable Behance iframe/html, show it in-site.
   // Confidential projects hide case study links and Behance entirely.
+  const liveIco = `<svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" style="width:13px;height:13px"><circle cx="7" cy="7" r="5.5"/><circle cx="7" cy="7" r="2" fill="currentColor" stroke="none"/></svg> `;
+  const liveBtn = p.liveUrl
+    ? `<a class="cs-btn-primary" href="${p.liveUrl}" target="_blank" rel="noopener">${liveIco}Try Live App</a>`
+    : '';
+
   let viewBtn = '';
   let dlBtn   = '';
   let asideView = '';
@@ -442,7 +448,7 @@ function openCase(id) {
         <div class="cs-cover-title">${p.name}</div>
       </div>
     </div>
-    <div class="cs-actions">${viewBtn}${dlBtn}</div>
+    <div class="cs-actions">${liveBtn}${viewBtn}${dlBtn}</div>
     <div class="cs-meta">
       <div class="csm"><div class="csm-k">Role</div><div class="csm-v">${p.role}</div></div>
       <div class="csm"><div class="csm-k">Timeline</div><div class="csm-v">${p.timeline}</div></div>
@@ -457,7 +463,21 @@ function openCase(id) {
           <div class="csb-lbl">Key Highlights</div>
           <ul class="hl">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
         </div>
-        ${!p.confidential ? `<div class="csb"><div class="csb-lbl">Screens</div><div class="sg">${screens}</div></div>` : ''}
+        ${!p.confidential ? `<div class="csb">
+          <div class="csb-lbl">Screens</div>
+          ${imgScreens.length > 0
+            ? `<div class="sg">${screens}</div>`
+            : p.liveUrl
+              ? `<div class="embed-ph" style="gap:14px;padding:32px 24px">
+                  <svg viewBox="0 0 28 28" fill="none" stroke="#10b981" stroke-width="1.3">
+                    <circle cx="14" cy="14" r="12"/><circle cx="14" cy="14" r="4" fill="rgba(16,185,129,.2)"/>
+                  </svg>
+                  <p style="color:var(--t1);font-size:14px;max-width:300px;text-align:center;margin:0">This is a live, production app with real users. Experience it directly in your browser.</p>
+                  <a class="embed-lnk" href="${p.liveUrl}" target="_blank" rel="noopener" style="color:#10b981;font-size:13px;font-weight:600">Open ${p.name.split(' —')[0]} Live →</a>
+                </div>`
+              : `<div class="sg">${screens}</div>`
+          }
+        </div>` : ''}
         ${prototypeSection}
       </div>
       <div class="cs-aside">
@@ -476,6 +496,12 @@ function openCase(id) {
             ${p.cat.map(c => `<span class="cb-tag">${c}</span>`).join('')}
           </div>
         </div>
+        ${p.liveUrl ? `<a class="proto-btn" href="${p.liveUrl}" target="_blank" rel="noopener" style="background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.25);color:#10b981">
+          <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="7" cy="7" r="5.5"/><circle cx="7" cy="7" r="2" fill="#10b981" stroke="none"/>
+          </svg>
+          Try Live App
+        </a>` : ''}
         ${!p.confidential && p.figmaLink ? `<a class="proto-btn" href="${p.figmaLink}" target="_blank">
           <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M8 1h5m0 0v5m0-5L6 8"/>
